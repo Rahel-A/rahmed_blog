@@ -10,8 +10,8 @@ build_search_index = false
 theme = "papaya"
 [languages]
 [languages.en]
-title = "Rahel Ahmed's corner"
-description = "Portfolio for Rahel Ahmed"
+title = "Rahel Ahmed's spectre"
+description = "The software industry moves faster than clouds"
 generate_feed = true
 feed_filename = "atom.xml"
 # The taxonomies to be rendered for the site and their configuration of the default languages
