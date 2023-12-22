@@ -67,3 +67,7 @@ email = "rahel@tuta.io"
 github = "rahel-a"
 linkedin = "rahelahmed"
 instagram = "rahel_atb"
+other = [
+    { name = "Discord", font_awesome = "fa-brands fa-discord", url = "https://discord.gg/7XTEgjqyY5"},
+    { name = "Instagram", font_awesome = "fa-brands fa-instagram", url = "https://www.instagram.com/rahel_atb/" }
+]
