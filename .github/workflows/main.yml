@@ -23,14 +23,13 @@ jobs:
   build_and_deploy:   
     name: build static website
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.repository_owner == 'rahel-a' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout main
         uses: actions/checkout@main
         with:
           lfs: true
       - name: "Build and deploy website"
-        if: github.repository_owner == 'rahel-a' && github.ref != 'refs/heads/main'
         uses: shalzz/zola-deploy-action@v0.18.0
         env:
           PAGES_BRANCH: gh-pages
