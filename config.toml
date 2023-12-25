@@ -42,8 +42,6 @@ next_page = "To older posts"
 # Customize your post date format. See: https://tera.netlify.app/docs/#date
 date_format = "%B %e, %Y"
 
-
-
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -55,8 +53,8 @@ menu_items = [
     { name = "projects", url = "$LANG_BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
     { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
     # tag is not a zola section, it's just a link.
-    # { name = "tags", url = "$LANG_BASE_URL/tags" },
-    # { name = "about", url = "$LANG_BASE_URL/about", show_recent = false },
+    { name = "tags", url = "$LANG_BASE_URL/tags" },
+    { name = "about", url = "$LANG_BASE_URL/about", show_recent = false },
 ]
 
 [extra.cdn]
@@ -71,3 +69,10 @@ other = [
     { name = "Discord", font_awesome = "fa-brands fa-discord", url = "https://discord.gg/7XTEgjqyY5"},
     { name = "Instagram", font_awesome = "fa-brands fa-instagram", url = "https://www.instagram.com/rahel_atb/" }
 ]
+
+[extra.ogp]
+locale = "en_GB"
+first_name = "Rahel"
+last_name = "Ahmed"
+gender = "male"
+username = "rahela"
