@@ -1,3 +1,4 @@
 [submodule "themes/papaya"]
 	path = themes/papaya
-	url = https://github.com/justint/papaya.git
+	url = https://github.com/Rahel-a/papaya.git
+	branch = patch-2
