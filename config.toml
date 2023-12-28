@@ -12,12 +12,11 @@ theme = "papaya"
 [languages.en]
 title = "Rahel Ahmed's spectre"
 description = "The software industry moves faster than clouds"
-generate_feed = true
-feed_filename = "atom.xml"
+generate_feed = false
 # The taxonomies to be rendered for the site and their configuration of the default languages
 taxonomies = [
-    { name = "tags", feed = true, lang = "en" },
-    { name = "categories", feed = true, lang = "en" },
+    { name = "tags", feed = false, lang = "en" },
+    { name = "categories", feed = false, lang = "en" },
 ]
 
 [languages.en.translations]
