@@ -36,6 +36,7 @@ to_all_categories = "To all categories"
 view_by = "View by"
 other = "Other"
 minute = "min"
+cv = "CV"
 prev_page = "To newer posts"
 next_page = "To older posts"
 # Customize your post date format. See: https://tera.netlify.app/docs/#date
@@ -53,6 +54,7 @@ menu_items = [
     { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
     # tag is not a zola section, it's just a link.
     { name = "tags", url = "$LANG_BASE_URL/tags" },
+    { name = "cv", url = "$LANG_BASE_URL/cv"},
     { name = "about", url = "$LANG_BASE_URL/about", show_recent = false },
 ]
 
