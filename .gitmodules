@@ -2,3 +2,6 @@
 	path = themes/papaya
 	url = https://github.com/Rahel-a/papaya.git
 	branch = patch-2
+[submodule "content/cv"]
+	path = content/cv
+	url = https://github.com/Rahel-a/rahmed_blog_portfolio.git
