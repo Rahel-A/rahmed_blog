@@ -1,0 +1,12 @@
+@use "fonts";
+@import "../themes/papaya/sass/base.scss";
+
+html {
+    font-family: InterVariable, roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    /* 1 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
