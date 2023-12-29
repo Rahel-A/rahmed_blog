@@ -15,6 +15,20 @@ jobs:
         uses: actions/checkout@main
         with:
           lfs: true
+      - name: Install rust tools
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          target: wasm32-unknown-unknown
+      - name: Check CV build
+        run: cd content/cv/ && cargo check --target wasm32-unknown-unknown
+
+      - name: Install trunk
+        uses: jetli/trunk-action@v0.4.0
+        with:
+          version: 'latest'
+      - name: Build cv webpage
+        run: cd content/cv/ && trunk build
+
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.18.0
         env:
@@ -29,6 +43,19 @@ jobs:
         uses: actions/checkout@main
         with:
           lfs: true
+      - name: Install rust tools
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          target: wasm32-unknown-unknown
+      - name: Install trunk
+        uses: jetli/trunk-action@v0.4.0
+        with:
+          version: 'latest'
+      - name: Build CV webpage
+        run: cd content/cv/ && trunk build --release
+      - name: Add CV webpage to static
+        run: cp content/cv/dist static/cv
+
       - name: "Build and deploy website"
         uses: shalzz/zola-deploy-action@v0.18.0
         env:
