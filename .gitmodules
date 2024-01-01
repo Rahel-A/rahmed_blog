@@ -8,3 +8,6 @@
 [submodule "content/cv"]
 	path = content/cv
 	url = https://github.com/Rahel-a/rahmed_blog_portfolio.git
+[submodule "content/diagrams"]
+	path = content/diagrams
+	url = git@github.com:Rahel-A/rahmed_blog_data.git

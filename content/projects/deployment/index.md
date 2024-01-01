@@ -24,16 +24,16 @@ Now I have a Raspberry PI running a few different containers related smart home,
 I do not have many the devices in the deployment yet, but the PI and my previously converted gaming PC into a NAS device have been pretty good so far.
 Ideally I should separate some functions for improved security, but with the price hikes, scarcity, and what not, it is what it is...
 
-{{ img(path="/2023/deployment-pi.svg", extended_width_pct=0.1, alt="Smart home Services", caption="Services running on PI", clickable=true) }}
+{{ img(path="/diagrams/deployment-pi.svg", extended_width_pct=0.1, alt="Smart home Services", caption="Services running on PI", clickable=true) }}
 
 At the time being I have not migrated the APPS running in TrueNAS to a Kubernetes node running in a VM on the TrueNAS.
 This will be the plan:
-{{ img(path="/2023/deployment-truenas.svg", extended_width_pct=1.0, alt="Media Services", caption="Services running on TrueNAS PC", clickable=true) }}
+{{ img(path="/diagrams/deployment-truenas.svg", extended_width_pct=1.0, alt="Media Services", caption="Services running on TrueNAS PC", clickable=true) }}
 
 The Raspberry PI does not seem capable of being able to run more than a few containers of the types of services that I have configured in the network.
 I had wished to run only media related services on the TrueNAS PC, but I migrated monitoring, and other non smart home related apps to the PC.
 Thus, the overall deployment is as such:
-{{ img(path="/2023/deployment.svg", extended_width_pct=0.9, alt="My Homelab deployment", caption="My current Homelab configuration", clickable=true) }}
+{{ img(path="/diagrams/deployment.svg", extended_width_pct=0.9, alt="My Homelab deployment", caption="My current Homelab configuration", clickable=true) }}
 
 I love configuring systems, so this has been an exciting journey.
 It has been interesting to move my deployments to Kubernetes, and I will continue experimenting throughout 2024 and beyond.
