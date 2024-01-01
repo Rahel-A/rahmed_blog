@@ -15,17 +15,18 @@ jobs:
         uses: actions/checkout@main
         with:
           lfs: true
+          submodules: true
       - name: Install rust tools
         uses: dtolnay/rust-toolchain@stable
         with:
           target: wasm32-unknown-unknown
-      - name: Check CV build
-        run: cd content/cv/ && cargo check --target wasm32-unknown-unknown
-
       - name: Install trunk
         uses: jetli/trunk-action@v0.4.0
         with:
           version: 'latest'
+
+      - name: Check CV build
+        run: cd content/cv/ && ./check.sh
       - name: Build cv webpage
         run: cd content/cv/ && trunk build
 
