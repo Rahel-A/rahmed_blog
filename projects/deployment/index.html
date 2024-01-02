@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <title>Homelab Configuration - Rahel Ahmed&#x27;s spectre</title>
+    <meta name="description" content="The software industry moves faster than clouds">
+
+    
+    <link rel="stylesheet" href="https://www.rahmed.work/base.css">
+    <link rel="stylesheet" href="https://www.rahmed.work/dark.css">
+
+    <link rel="preload" href=https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;font-awesome&#x2F;6.3.0&#x2F;css&#x2F;all.min.css as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href=https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;font-awesome&#x2F;6.3.0&#x2F;css&#x2F;all.min.css></noscript>
+
+    
+
+    
+    
+    <meta property="og:locale" content="en_GB">
+    
+    <meta property="og:title" content="Homelab Configuration">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="https://www.rahmed.work/about/">
+    <meta property="article:published_time" content="2023-12-30">
+    
+    
+    
+    <meta property="og:url" content="https://www.rahmed.work/projects/deployment/">
+    
+    
+    <meta property="og:image" content="https://www.rahmed.work/projects/deployment/deployment.png">
+    
+    <meta property="og:image:alt" content="My Homelab configuration with Kubernetes and all of my servers&#x2F;devices">
+    
+    
+    
+    <meta property="og:description" content="My current Homelab configuration (Kubernetes deployment).
+">
+    
+
+
+    
+
+<script async src="https://eu.umami.is/script.js" data-website-id="7d014069-eff0-4af0-83fb-1be3c8461fa3"></script>
+
+</head>
+<body>
+<div class="container">
+    
+    
+    <header>
+        <h1 class="site-header">
+            <a href="https:&#x2F;&#x2F;www.rahmed.work">Rahel Ahmed&#x27;s spectre</a>
+        </h1>
+        <nav>
+            <ul>
+            
+            
+                
+                <li><a class="active" href="https:&#x2F;&#x2F;www.rahmed.work&#x2F;projects">Projects</a></li>
+            
+                
+                <li><a  href="https:&#x2F;&#x2F;www.rahmed.work&#x2F;blog">Blog</a></li>
+            
+                
+                <li><a  href="https:&#x2F;&#x2F;www.rahmed.work&#x2F;tags">Tags</a></li>
+            
+                
+                <li><a  href="https:&#x2F;&#x2F;cv.rahmed.work">CV</a></li>
+            
+                
+                <li><a  href="https:&#x2F;&#x2F;www.rahmed.work&#x2F;about">About</a></li>
+            
+            
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+<article class="post">
+    
+        
+        
+        
+            
+            
+            
+        
+    <img src="https:&#x2F;&#x2F;www.rahmed.work&#x2F;processed_images&#x2F;deployment.e04823b8a4794174.png" class="" alt="My Homelab configuration with Kubernetes and all of my servers&#x2F;devices"/>
+    
+    
+    
+        
+        <header>
+            <h1>Homelab Configuration</h1>
+            <h2 class="post-summary">My current Homelab configuration (Kubernetes deployment).
+</h2>
+        </header>
+        
+        
+<div class="article-info">
+    
+    <div class="article-date">December 30, 2023</div>
+    
+    <div class="article-taxonomies">
+        
+        ◦
+        <ul class="article-categories">
+            
+            <li><a href="https://www.rahmed.work/categories/homelab/">homelab</a></li>
+            
+        </ul>
+        
+        
+    </div>
+    
+</div>
+
+        
+    
+    
+    <div class="content">
+        <span id="continue-reading"></span>
+<p>As I have not been working on a project, I have had plenty of time to experiment with Cloud Native technologies.
+The TrueNAS Scale OS abstracts away the Kubernetes details, leading to ClickOps, but you still get some experience.
+As I have interests in DevOps, I figured it was time that I learnt Kubernetes and started configuring my own system.
+After three months of experimenting I took and passed <a href="https://www.credly.com/badges/052b5593-910a-4201-ba42-30fe87d194ab">KCNA certification exam</a> without taking the course, so this route of learning proved quite educational.</p>
+<p>I started experimenting with docker containers back in 2018 with a single Raspberry Pi.
+Now I have a Raspberry PI running a few different containers related smart home, but also it is in my network's <a href="https://en.wikipedia.org/wiki/DMZ_(computing)">DMZ</a> as the main point of entry</p>
+<p>I do not have many the devices in the deployment yet, but the PI and my previously converted gaming PC into a NAS device have been pretty good so far.
+Ideally I should separate some functions for improved security, but with the price hikes, scarcity, and what not, it is what it is...</p>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+<figure class="extended-figure">
+    <a href="https://www.rahmed.work/diagrams/deployment-pi.svg" target="_blank"> 
+    <img src="&#x2F;diagrams&#x2F;deployment-pi.svg"  alt="Smart home Services"/>
+    </a>
+    <figcaption>Services running on PI</figcaption>
+</figure>
+<p>At the time being I have not migrated the APPS running in TrueNAS to a Kubernetes node running in a VM on the TrueNAS.
+This will be the plan:
+
+
+
+
+
+
+
+
+
+    
+
+
+
+<figure class="extended-figure">
+    <a href="https://www.rahmed.work/diagrams/deployment-truenas.svg" target="_blank"> 
+    <img src="&#x2F;diagrams&#x2F;deployment-truenas.svg"  alt="Media Services"/>
+    </a>
+    <figcaption>Services running on TrueNAS PC</figcaption>
+</figure>
+</p>
+<p>The Raspberry PI does not seem capable of being able to run more than a few containers of the types of services that I have configured in the network.
+I had wished to run only media related services on the TrueNAS PC, but I migrated monitoring, and other non smart home related apps to the PC.
+Thus, the overall deployment is as such:
+
+
+
+
+
+
+
+
+
+    
+
+
+
+<figure class="extended-figure">
+    <a href="https://www.rahmed.work/diagrams/deployment.svg" target="_blank"> 
+    <img src="&#x2F;diagrams&#x2F;deployment.svg"  alt="My Homelab deployment"/>
+    </a>
+    <figcaption>My current Homelab configuration</figcaption>
+</figure>
+</p>
+<p>I love configuring systems, so this has been an exciting journey.
+It has been interesting to move my deployments to Kubernetes, and I will continue experimenting throughout 2024 and beyond.
+I hope to eventually move into a cloud related role.</p>
+
+    </div>
+    
+
+    
+</article>
+
+
+    <footer>
+        <p>
+            
+<span class="icon-text">
+  
+
+  
+
+  
+  <a href="https://github.com/rahel-a" aria-label="Open rahel-a GitHub" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-github fa-lg" aria-hidden="true" title="GitHub"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/rahelahmed" aria-label="Open rahelahmed LinkedIn" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true" title="LinkedIn"></i>
+    </span>
+  </a>
+  
+
+  
+
+  
+
+  
+
+  
+  <a href="mailto:rahel@tuta.io" aria-label="Email rahel@tuta.io" target="_blank">
+    <span class="icon is-large">
+      <i class="far fa-envelope fa-lg" aria-hidden="true" title="email"></i>
+    </span>
+  </a>
+  
+
+  
+
+  
+  
+  <a href=https:&#x2F;&#x2F;discord.gg&#x2F;7XTEgjqyY5 aria-label="Open Discord" target="_blank">
+    <span class="icon is-large">
+      <i class="fa-brands fa-discord fa-lg" aria-hidden="true" title=Discord></i>
+    </span>
+  </a>
+  
+  <a href=https:&#x2F;&#x2F;www.instagram.com&#x2F;rahel_atb&#x2F; aria-label="Open Instagram" target="_blank">
+    <span class="icon is-large">
+      <i class="fa-brands fa-instagram fa-lg" aria-hidden="true" title=Instagram></i>
+    </span>
+  </a>
+  
+  
+</span>
+
+        </p>
+        <p>
+            
+            
+        </p>
+    </footer>
+</div>
+</body>
+</html>
